@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+
 pragma solidity ^0.8.0;
 
 contract TodoList {
@@ -26,7 +26,7 @@ contract TodoList {
     }
 
     function toggleCompleted(uint256 _id) public {
-        // 'memory' yerine 'storage' kullanmalıyız çünkü blockchain üzerindeki veriyi kalıcı değiştireceğiz
+      
         Task storage _task = tasks[_id]; 
         _task.completed = !_task.completed;
         emit TaskCompleted(_id, _task.completed);
